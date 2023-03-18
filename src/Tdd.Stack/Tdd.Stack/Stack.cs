@@ -13,4 +13,19 @@ public class Stack<T>
         }
         Capacity = capacity;
     }
+
+    public void Push(T item)
+    {
+        throw new NotImplementedException();
+    }
+
+    public T Peek()
+    {
+        throw new NotImplementedException();
+    }
+
+    public T Pop()
+    {
+        throw new NotImplementedException();
+    }
 }
