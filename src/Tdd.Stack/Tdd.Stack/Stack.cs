@@ -2,10 +2,15 @@ namespace Tdd.Stack;
 
 public class Stack<T>
 {
-    public int Size => throw new NotImplementedException();
-    public int Capacity => throw new NotImplementedException();
+    public int Size => 0;
+    public readonly int Capacity;
     public Stack(int capacity)
     {
-        
+        if (capacity <= 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(capacity), capacity,
+                "Stack capacity must be non-negative.");
+        }
+        Capacity = capacity;
     }
 }

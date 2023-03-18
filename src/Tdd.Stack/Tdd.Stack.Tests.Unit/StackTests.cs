@@ -2,7 +2,7 @@ namespace Tdd.Stack.Tests.Unit;
 
 public class StackTests
 {
-    [Fact(Skip = "Todo")]
+    [Fact]
     public void Size_NoOperations_Zero()
     {
         // Arrange
@@ -15,7 +15,7 @@ public class StackTests
         Assert.Equal(0, size);
     }
     
-    [Theory(Skip = "TODO")]
+    [Theory]
     [InlineData(0)]
     [InlineData(-10)]
     public void Ctor_NonpositiveCapacity_ArgumentOutOfRangeException(int capacity)
@@ -29,7 +29,7 @@ public class StackTests
         Assert.IsType<ArgumentOutOfRangeException>(e);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void Capacity_NoOperations_ValuePassedToConstructor()
     {
         // Arrange
