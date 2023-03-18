@@ -7,3 +7,15 @@ TDD implementation of the stack. Done purely as a learning exercise based on [fr
 - This project uses [xUnit](https://github.com/xunit/xunit) instead of [NUnit](https://github.com/nunit/nunit)
 - Targeting .NET 6 instead of .NET Core 3
 - Using test cases naming convention of `Method_Condition_Expectation` instead of more, let's say, free form approach from the article. 
+
+## Business requirements
+
+Using the same requirements as the article. Cited for completeness.
+
+- Limit the size of the stack.
+- Add element. (`push`)
+- Remove element. (`pop`)
+- Check what was the last element. (`peak`)
+- Get the current size of the stack.
+- Have a class that can accept any data type.
+- When the customer exceeds the size of the Stack, we need to throw an appropriate exception.
