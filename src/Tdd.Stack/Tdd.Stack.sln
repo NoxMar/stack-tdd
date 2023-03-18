@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tdd.Stack", "Tdd.Stack\Tdd.Stack.csproj", "{2AFF8DE5-6EFF-4820-A029-C51233FA7BF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tdd.Stack.Tests.Unit", "Tdd.Stack.Tests.Unit\Tdd.Stack.Tests.Unit.csproj", "{5C2559CD-3F33-4893-BE90-5CCC1EF30135}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AFF8DE5-6EFF-4820-A029-C51233FA7BF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AFF8DE5-6EFF-4820-A029-C51233FA7BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AFF8DE5-6EFF-4820-A029-C51233FA7BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AFF8DE5-6EFF-4820-A029-C51233FA7BF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C2559CD-3F33-4893-BE90-5CCC1EF30135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C2559CD-3F33-4893-BE90-5CCC1EF30135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C2559CD-3F33-4893-BE90-5CCC1EF30135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C2559CD-3F33-4893-BE90-5CCC1EF30135}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
