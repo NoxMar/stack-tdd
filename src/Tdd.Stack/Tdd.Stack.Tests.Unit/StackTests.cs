@@ -42,7 +42,7 @@ public class StackTests
         Assert.Equal(10, maxSize);
     }
 
-    [Theory(Skip = "TODO")]
+    [Theory]
     [InlineData(0)]
     [InlineData(5)]
     [InlineData(9)]
@@ -63,7 +63,7 @@ public class StackTests
         Assert.Equal(expected, sut.Size);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void Push_NotFulComplexOrder_IncreaseSize()
     {
         // Arrange
@@ -76,7 +76,7 @@ public class StackTests
         Assert.Equal(3, sut.Size);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void Push_Full_InvalidOperationException()
     {
         // Arrange
@@ -95,7 +95,7 @@ public class StackTests
         Assert.Contains("full", ex.Message);
     }
 
-    [Theory(Skip = "TODO")]
+    [Theory]
     [InlineData(0)]
     [InlineData(5)]
     [InlineData(9)]
@@ -115,7 +115,7 @@ public class StackTests
         Assert.Equal(999, sut.Peek());
     }
     
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void Push_NotFulComplexOrder_ChangePeek()
     {
         // Arrange

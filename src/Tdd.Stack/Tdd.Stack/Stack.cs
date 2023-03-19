@@ -2,8 +2,9 @@ namespace Tdd.Stack;
 
 public class Stack<T>
 {
-    public int Size => 0;
+    public int Size { get; private set; }
     public readonly int Capacity;
+    private readonly T[] _backing;
     public Stack(int capacity)
     {
         if (capacity <= 0)
@@ -12,20 +13,26 @@ public class Stack<T>
                 "Stack capacity must be non-negative.");
         }
         Capacity = capacity;
+        _backing = new T[Capacity];
     }
 
     public void Push(T item)
     {
-        throw new NotImplementedException();
+        if (Size == Capacity)
+        {
+            throw new InvalidOperationException("Cannot push to a full stack.");
+        }
+
+        _backing[Size] = item;
+        Size++;
     }
 
-    public T Peek()
-    {
-        throw new NotImplementedException();
-    }
+    public T Peek() 
+        => _backing[Size - 1];
 
     public T Pop()
     {
-        throw new NotImplementedException();
+        Size--;
+        return _backing[Size];
     }
 }
