@@ -128,6 +128,20 @@ public class StackTests
         Assert.Equal(999, sut.Peek());
     }
 
+    [Fact(Skip="TODO")]
+    public void Peek_EmptyStack_InvalidOperationException()
+    {
+        // Arrange
+        Stack<int> sut = new(10);
+        
+        // Act
+        var e = Record.Exception(() => sut.Peek());
+        
+        // Assert 
+        var ex = Assert.IsType<InvalidOperationException>(e);
+        Assert.Contains("empty", ex.Message);
+    }
+
     /// <summary>
     /// Create stack of capacity 2 and size 3 through multiple push and pop operations.
     /// </summary>
