@@ -15,7 +15,7 @@ Using the same requirements as the article. Cited for completeness.
 - Limit the size of the stack.
 - Add element. (`push`)
 - Remove element. (`pop`)
-- Check what was the last element. (`peak`)
+- Check what was the last element. (`peek`)
 - Get the current size of the stack.
 - Have a class that can accept any data type.
 - When the customer exceeds the size of the Stack, we need to throw an appropriate exception.
