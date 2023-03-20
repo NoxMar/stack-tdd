@@ -27,8 +27,14 @@ public class Stack<T>
         Size++;
     }
 
-    public T Peek() 
-        => _backing[Size - 1];
+    public T Peek()
+    {
+        if (Size == 0)
+        {
+            throw new InvalidOperationException("Cannot get peak of an empty stack.");
+        }
+        return _backing[Size - 1];
+    }
 
     public T Pop()
     {

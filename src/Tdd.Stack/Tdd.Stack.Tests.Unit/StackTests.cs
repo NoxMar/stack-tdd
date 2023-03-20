@@ -128,7 +128,7 @@ public class StackTests
         Assert.Equal(999, sut.Peek());
     }
 
-    [Fact(Skip="TODO")]
+    [Fact]
     public void Peek_EmptyStack_InvalidOperationException()
     {
         // Arrange
