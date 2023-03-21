@@ -142,7 +142,7 @@ public class StackTests
         Assert.Contains("empty", ex.Message);
     }
 
-    [Fact(Skip="TODO")]
+    [Fact]
     public void Pop_EmptyStack_InvalidOperationException()
     {
         // Arrange
@@ -156,7 +156,7 @@ public class StackTests
         Assert.Contains("empty", ex.Message);
     }
 
-    [Theory(Skip = "TODO")]
+    [Theory]
     [InlineData(1)]
     [InlineData(5)]
     [InlineData(10)]
@@ -177,7 +177,7 @@ public class StackTests
         Assert.Equal(expectedSize, sut.Size);
     }
 
-    [Theory(Skip = "TODO")]
+    [Theory]
     [InlineData(1)]
     [InlineData(5)]
     [InlineData(10)]
@@ -198,7 +198,7 @@ public class StackTests
         Assert.Equal(expectedTop, top);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void Pop_MoreComplexStack_ReturnTop()
     {
         // Arrange

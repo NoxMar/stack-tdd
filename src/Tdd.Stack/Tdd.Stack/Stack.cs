@@ -38,6 +38,10 @@ public class Stack<T>
 
     public T Pop()
     {
+        if (Size == 0)
+        {
+            throw new InvalidOperationException("Cannot pop from an empty stack.");
+        }
         Size--;
         return _backing[Size];
     }
