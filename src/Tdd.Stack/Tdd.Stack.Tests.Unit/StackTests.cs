@@ -142,6 +142,75 @@ public class StackTests
         Assert.Contains("empty", ex.Message);
     }
 
+    [Fact(Skip="TODO")]
+    public void Pop_EmptyStack_InvalidOperationException()
+    {
+        // Arrange
+        Stack<int> sut = new(10);
+        
+        // Act
+        var e = Record.Exception(() => sut.Pop());
+        
+        // Assert
+        var ex = Assert.IsType<InvalidOperationException>(e);
+        Assert.Contains("empty", ex.Message);
+    }
+
+    [Theory(Skip = "TODO")]
+    [InlineData(1)]
+    [InlineData(5)]
+    [InlineData(10)]
+    public void Pop_NonemptyStack_DecreaseSizeByOne(int initialSize)
+    {
+        // Arrange
+        var expectedSize = initialSize - 1;
+        Stack<int> sut = new(10);
+        for (int i = 0; i < initialSize; i++)
+        {
+            sut.Push(i);
+        }
+        
+        // Act
+        _ = sut.Pop();
+        
+        // Assert
+        Assert.Equal(expectedSize, sut.Size);
+    }
+
+    [Theory(Skip = "TODO")]
+    [InlineData(1)]
+    [InlineData(5)]
+    [InlineData(10)]
+    public void Pop_NonEmptyStack_ReturnTop(int initialSize)
+    {
+        // Arrange
+        Stack<int> sut = new(10);
+        int expectedTop = initialSize - 1;
+        for (int i = 0; i < initialSize; i++)
+        {
+            sut.Push(i);
+        }
+        
+        // Act
+        var top = sut.Pop();
+        
+        // Assert
+        Assert.Equal(expectedTop, top);
+    }
+
+    [Fact(Skip = "TODO")]
+    public void Pop_MoreComplexStack_ReturnTop()
+    {
+        // Arrange
+        var sut = MoreComplexStack();
+        
+        // Act
+        var top = sut.Pop();
+        
+        // Assert
+        Assert.Equal(222, top);
+    }
+
     /// <summary>
     /// Create stack of capacity 2 and size 3 through multiple push and pop operations.
     /// </summary>
